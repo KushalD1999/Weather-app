@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+    <style media="screen">
+        body{
+            background: #FF416C;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
 </head>
 <body>
-<div class="jumbotron jumbotron-fluid" style="background-color:cyan;">
-    <div class="container">
+<div class="jumbotron jumbotron-fluid" style="text-align:center; background: linear-gradient(to right, #b2fefa, #0ed2f7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+    <div class="container" style="color:black; font-weight: bold; ">
         <h1 class="display-4">Weather App</h1>
         <p class="lead">Built using Node.JS and Express.JS</p>
     </div>
@@ -19,20 +28,23 @@
 
 <div class="container">
     <div class="" style="width: 300px; margin: auto;">
-        <form class="form-inline">
+        <form class="form-inline" action="./index.html">
             <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="" placeholder="City">
+                <input type="text" class="form-control" style="font-size: 14px;" id="" placeholder="City">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            <!-- <button type="submit" class="btn btn-primary btn-md mb-2">Submit</button> -->
+            <input class="btn btn-primary" type="submit" value="Submit">
+
         </form>
     </div>
 </div>
 
 
 <div class="container">
-    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;">
+
+    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;  background: linear-gradient(to right, #b2fefa, #0ed2f7);">
         <div class="media">
-            <img class="align-self-center mr-3" src="..." alt="Generic placeholder image">
+            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0">Center-aligned media</h5>
                 <p>HELLOOO</p>
@@ -40,7 +52,31 @@
             </div>
         </div>
     </div>
-</div>
 
+    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px; background: linear-gradient(to right, #b2fefa, #0ed2f7);">
+        <div class="media">
+            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+                <h5 class="mt-0">Center-aligned media</h5>
+                <p>HELLOOO</p>
+                <p class="mb-0">HeLLOOOO</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;background: linear-gradient(to right, #b2fefa, #0ed2f7);">
+        <div class="media">
+            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+                <h5 class="mt-0">Center-aligned media</h5>
+                <p>HELLOOO</p>
+                <p class="mb-0">HeLLOOOO</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 </body>
 </html>
