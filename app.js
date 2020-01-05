@@ -4,7 +4,7 @@ var request = require("request-promise");
 var bodyParser = require("body-Parser");
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/weather_app", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/weather_app", {useNewUrlParser: true });
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
