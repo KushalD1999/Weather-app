@@ -15,10 +15,6 @@ var citySchema = new mongoose.Schema({
 });
 
 var city = mongoose.model("City", citySchema);
-//
-// city.create({name: "Toronto"});
-// city.create({name: "Las Vegas"});
-// city.create({name: "Sydney"});
 
 async function weatherData (cities){
     var ret_data = []
@@ -38,10 +34,6 @@ async function weatherData (cities){
     return ret_data;
 }
 
-
-// var city = "Toronto";
-// var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1`;
-
 app.get("/", function (req,res) {
         city.find({}, function (err, cities) {
             if(err){
@@ -51,10 +43,13 @@ app.get("/", function (req,res) {
                     res.render("main", {data:results})
                 });
             }
-
         });
-    });
+});
 
+app.post("/", function(req, res) {
+    city.create({name : req.body.citynames});
+    res.redirect('/');
+});
 
 app.listen(3000, function () {
     console.log("Server Started");
