@@ -10,8 +10,6 @@
 
     <style media="screen">
         body{
-            background: #FF416C;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
@@ -30,7 +28,7 @@
     <div class="" style="width: 300px; margin: auto;">
         <form class="form-inline" action="./index.html">
             <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" style="font-size: 14px;" id="" placeholder="City">
+                <input type="text" class="form-control" style="font-size: 14px;" id="" placeholder="City" name="citynames">
             </div>
             <!-- <button type="submit" class="btn btn-primary btn-md mb-2">Submit</button> -->
             <input class="btn btn-primary" type="submit" value="Submit">
@@ -42,39 +40,19 @@
 
 <div class="container">
 
-    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;  background: linear-gradient(to right, #b2fefa, #0ed2f7);">
-        <div class="media">
-            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0">Center-aligned media</h5>
-                <p>HELLOOO</p>
-                <p class="mb-0">HeLLOOOO</p>
+    <% for(var i = 0; i<data.length; i++){ %>
+        <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;  background: linear-gradient(to right, #b2fefa, #0ed2f7);">
+            <div class="media">
+                <img class="align-self-center mr-3" style="width:100px; height:100px;" src="http://openweathermap.org/img/w/<%=data[i].icon%>.png" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h4>City: <%=data[i].city%></h4>
+                    <h6 class="mt-0">Temperature (in Fahrenheit): <%=data[i].temperature%></h6>
+                    <h6 class="mt-0">Feels Like: <%=data[i].feels_like%></h6>
+                    <h6>Description: <%=data[i].description%></h6>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px; background: linear-gradient(to right, #b2fefa, #0ed2f7);">
-        <div class="media">
-            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0">Center-aligned media</h5>
-                <p>HELLOOO</p>
-                <p class="mb-0">HeLLOOOO</p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="" style="width: 400px; margin: 20px auto; border: 1px solid black; padding: 10px 10px;background: linear-gradient(to right, #b2fefa, #0ed2f7);">
-        <div class="media">
-            <img class="align-self-center mr-3" style="width:100px; height 100px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/56/6c/10/566c1052-e56e-79b7-107c-4e97fa2f94a6/source/512x512bb.jpg" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0">Center-aligned media</h5>
-                <p>HELLOOO</p>
-                <p class="mb-0">HeLLOOOO</p>
-            </div>
-        </div>
-    </div>
+    <%}%>
 
 
 </div>
